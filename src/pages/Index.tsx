@@ -114,23 +114,33 @@ const Index = () => {
   const keySkills = [
     {
       category: "Game Development",
-      skills: ["Unity", "C#", "Shader Graph", "URP", "VR/AR"]
+      skills: ["Unity", "C#", "Shader Graph", "URP", "VR/AR"],
+      icon: "🎮",
+      color: "neon-blue"
     },
     {
-      category: "Web Technologies",
-      skills: ["WebGL", "React", "Node.js", "WebSockets"]
+      category: "Web Technologies", 
+      skills: ["WebGL", "React", "Node.js", "WebSockets"],
+      icon: "🌐",
+      color: "neon-purple"
     },
     {
       category: "Backend & Database",
-      skills: ["MongoDB", "Firebase", "REST APIs"]
+      skills: ["MongoDB", "Firebase", "REST APIs"],
+      icon: "🗄️",
+      color: "neon-green"
     },
     {
       category: "DevOps & Tools",
-      skills: ["DevOps", "Git", "CI/CD", "Monitoring"]
+      skills: ["DevOps", "Git", "CI/CD", "Monitoring"],
+      icon: "⚙️",
+      color: "neon-orange"
     },
     {
       category: "Design & UX",
-      skills: ["UI/UX Design Thinking", "Gamification", "Interactive Media"]
+      skills: ["UI/UX Design Thinking", "Gamification", "Interactive Media"],
+      icon: "🎨",
+      color: "neon-pink"
     }
   ];
 
@@ -141,6 +151,88 @@ const Index = () => {
       
       {/* Hero Section */}
       <HeroSection />
+
+      {/* Key Skills Section - Made more prominent */}
+      <section className="py-32 px-4 relative z-10 bg-gradient-to-b from-background via-card/10 to-background">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16 animate-scale-up">
+            <h2 className="text-5xl md:text-7xl font-orbitron font-black mb-8 neon-text text-transparent bg-clip-text bg-gradient-to-r from-neon-green via-neon-blue to-neon-purple">
+              🔧 KEY SKILLS & TECHNOLOGIES
+            </h2>
+            <div className="w-32 h-1 bg-gradient-to-r from-neon-blue to-neon-purple mx-auto rounded-full mb-8" />
+            <p className="text-xl md:text-2xl font-rajdhani text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Cutting-edge technologies and proven methodologies for next-generation digital experiences
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {keySkills.map((skillGroup, index) => (
+              <Card 
+                key={skillGroup.category} 
+                className="hud-border bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm hover:bg-card/90 transition-all duration-500 transform hover:scale-105 hover:rotate-1 group"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <span className="text-4xl mr-4 group-hover:scale-125 transition-transform duration-300">
+                      {skillGroup.icon}
+                    </span>
+                    <h3 className={`text-2xl font-orbitron font-bold text-${skillGroup.color} group-hover:neon-text transition-all duration-300`}>
+                      {skillGroup.category}
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap gap-3">
+                    {skillGroup.skills.map((skill, skillIndex) => (
+                      <Badge 
+                        key={skill} 
+                        variant="outline" 
+                        className={`border-${skillGroup.color}/50 text-${skillGroup.color} hover:bg-${skillGroup.color}/20 hover:scale-110 transition-all duration-300 text-sm font-medium px-3 py-1`}
+                        style={{ animationDelay: `${(index * 0.1) + (skillIndex * 0.05)}s` }}
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Why Work With Me Section - Enhanced */}
+          <div className="mt-20">
+            <Card className="hud-border bg-gradient-to-r from-card/90 to-card/70 backdrop-blur-sm animate-scale-up">
+              <CardContent className="p-12">
+                <h3 className="text-4xl font-orbitron font-bold mb-8 text-center neon-text text-neon-purple">
+                  🚀 Why Work With Me?
+                </h3>
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div className="text-center group">
+                    <div className="text-5xl mb-4 group-hover:scale-125 transition-transform duration-300">⚡</div>
+                    <h4 className="text-xl font-orbitron font-bold mb-3 text-neon-blue">Game-First UX</h4>
+                    <p className="text-lg leading-relaxed">
+                      I merge game mechanics with functional UX to create memorable user experiences.
+                    </p>
+                  </div>
+                  <div className="text-center group">
+                    <div className="text-5xl mb-4 group-hover:scale-125 transition-transform duration-300">🔧</div>
+                    <h4 className="text-xl font-orbitron font-bold mb-3 text-neon-green">Clean & Scalable</h4>
+                    <p className="text-lg leading-relaxed">
+                      I'm fast, communicative, and committed to clean, modular, and scalable code.
+                    </p>
+                  </div>
+                  <div className="text-center group">
+                    <div className="text-5xl mb-4 group-hover:scale-125 transition-transform duration-300">🚀</div>
+                    <h4 className="text-xl font-orbitron font-bold mb-3 text-neon-orange">Full-Stack Expertise</h4>
+                    <p className="text-lg leading-relaxed">
+                      I can handle both frontend and backend seamlessly, including deployment and live support.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* About Section */}
       <section id="about" className="py-20 px-4 relative z-10">
