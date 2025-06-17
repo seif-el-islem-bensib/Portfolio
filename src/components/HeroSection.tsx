@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -39,7 +38,7 @@ const HeroSection = () => {
       <div className="text-center z-10 max-w-4xl mx-auto px-4">
         <div className="mb-8 animate-scale-up">
           <h1 className="text-6xl md:text-8xl font-orbitron font-black mb-4 neon-text text-transparent bg-clip-text bg-gradient-to-r from-neon-blue via-neon-purple to-neon-green">
-            WORLDWEAVER
+            SAIF ESSLEM
           </h1>
           <div className="h-16 flex items-center justify-center">
             <p className="text-2xl md:text-3xl font-rajdhani font-medium text-neon-blue">
@@ -51,7 +50,7 @@ const HeroSection = () => {
 
         <div className="mb-12 animate-slide-in-left">
           <p className="text-xl md:text-2xl font-rajdhani text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Game Developer • Unity Expert • VR/AR Architect • WebGL Specialist
+            Software Engineer • Game Developer • Unity Expert • VR/AR Architect • WebGL Specialist
           </p>
         </div>
 
