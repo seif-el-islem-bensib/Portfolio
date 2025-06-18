@@ -25,8 +25,7 @@ const Navigation = ({ activeSection }: NavigationProps) => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-neon-blue/30">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <a
-  href="https://drive.google.com/file/d/1pKtVFrVkkHqnJEQgs51X7411Z4EQZoT6/view?usp=sharing"
+      <a  href="https://drive.google.com/file/d/1pKtVFrVkkHqnJEQgs51X7411Z4EQZoT6/view?usp=sharing"
   target="_blank"
   rel="noopener noreferrer"
   className="font-orbitron font-bold text-xl text-neon-blue neon-text"
