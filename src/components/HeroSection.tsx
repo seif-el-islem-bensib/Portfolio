@@ -38,7 +38,7 @@ const HeroSection = () => {
       <div className="text-center z-10 max-w-4xl mx-auto px-4">
         <div className="mb-8 animate-scale-up">
           <h1 className="text-6xl md:text-8xl font-orbitron font-black mb-4 neon-text text-transparent bg-clip-text bg-gradient-to-r from-neon-blue via-neon-purple to-neon-green">
-            SAIF ESSLEM
+            SEIF ESSLEM BENSIB
           </h1>
           <div className="h-16 flex items-center justify-center">
             <p className="text-2xl md:text-3xl font-rajdhani font-medium text-neon-blue">

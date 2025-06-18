@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -27,25 +26,60 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
     }
   };
 
+  const isYouTube = project.demoUrl.includes("youtube.com") || project.demoUrl.includes("youtu.be");
+
+  const extractYouTubeId = (url: string): string | null => {
+    try {
+      const parsedUrl = new URL(url);
+      if (parsedUrl.hostname === 'youtu.be') {
+        return parsedUrl.pathname.slice(1);
+      }
+      if (parsedUrl.hostname.includes('youtube.com')) {
+        return parsedUrl.searchParams.get('v');
+      }
+      return null;
+    } catch {
+      return null;
+    }
+  };
+
+  const videoId = isYouTube ? extractYouTubeId(project.demoUrl) : null;
+
   return (
     <Card 
       className="project-card group overflow-hidden"
       style={{ animationDelay: `${index * 0.2}s` }}
     >
       <div className="relative overflow-hidden">
-        <img 
-          src={project.image} 
-          alt={project.title}
-          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-        />
+        {isYouTube && videoId ? (
+          <div className="w-full relative pt-[56.25%]">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src={`https://www.youtube.com/embed/${videoId}`}
+              title={project.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        ) : (
+          <img 
+            src={project.image} 
+            alt={project.title}
+            className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        )}
+
         <div className="absolute top-4 right-4">
           <Badge className={getStatusColor(project.status)}>
             {project.status}
           </Badge>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+        {/*  Allow click-through to iframe */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
       </div>
-      
+
       <CardContent className="p-6">
         <h3 className="text-xl font-orbitron font-bold mb-3 text-neon-blue group-hover:neon-text transition-all duration-300">
           {project.title}

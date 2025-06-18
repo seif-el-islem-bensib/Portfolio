@@ -38,44 +38,79 @@ const Index = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const projects = [
+    const projects = [
+      {
+        title: "RTS Falega Multiplayer",
+        description: " Set in an alternate historical timeline, Fallega immerses you in the heart of a revolution. You lead a group of local resistance fighters rising against the might of a powerful French colonial force. As the leader, every decision you make determines the fate of your people — will you outmaneuver the occupiers, unite the regions, and reclaim your land? Fallega is a real-time strategy (RTS) game I co-developed, combining online matchmaking, 3D modeling, and multiplayer gameplay mechanics into a polished, interactive experience.",
+        image: "/Fallega.png",
+        tags: [ "Unity", "C#", "SteamVR","Game balancing"],
+        demoUrl: "https://youtu.be/CAGgm8jqUJU",
+        status: "Live"
+      },
     {
-      title: "Quantum Odyssey VR",
-      description: "Immersive VR space exploration game built with Unity and SteamVR SDK",
-      image: "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=400&h=300&fit=crop",
-      tags: ["VR", "Unity", "C#", "SteamVR"],
-      demoUrl: "#",
-      status: "Live"
-    },
-    {
-      title: "Cyberpunk Racing WebGL",
-      description: "High-speed racing game optimized for web browsers with WebGL",
+      title: "Into my brain",
+      description: "Defend the last frontier: your own mind. In Into My Brain, a surreal tower defense game, you fight off waves of invasive thoughts, fears, and corrupted memories as they try to seize control of your neural pathways. Strategically place cognitive towers—like Logic Nodes, Memory Restorers, and Emotion Regulators—across beautifully abstract landscapes of your subconscious.",
       image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=300&fit=crop",
-      tags: ["WebGL", "Unity", "JavaScript", "Racing"],
-      demoUrl: "#",
+      tags: [, "Unity", "C#", "Tower Defense", "Game Design"],
+      demoUrl: "https://www.youtube.com/watch?v=HYBmKMAopXM",
       status: "Demo"
     },
     {
-      title: "AR Portal Adventure",
-      description: "Augmented reality mobile game with real-world interaction",
+      title: "RootAte",
+      description: "Step into Rotate, a puzzle game where you travel through time — from ancient civilizations to futuristic landscapes. Each era comes with its unique tools, technologies, and logic, challenging you to adapt and think differently in every level. Solve puzzles by cleverly rotating between time periods, unlocking secrets of the past to shape the future.",
       image: "https://images.unsplash.com/photo-1592478411213-6153e4ebc696?w=400&h=300&fit=crop",
-      tags: ["AR", "Unity", "ARCore", "Mobile"],
-      demoUrl: "#",
-      status: "Coming Soon"
+      tags: [ "Unity",  "Mobile"],
+      demoUrl: "https://youtu.be/EUCJxTDVyv8",
+      status: "Demo"
     },
     {
-      title: "Multiplayer Battle Arena",
-      description: "Real-time multiplayer game with WebSocket networking",
+      title: "Jiggsaw Puzzle",
+      description: "Relax and challenge your mind with a beautifully crafted jigsaw puzzle experience. Piece together stunning images across various categories — nature, art, architecture, and more. With multiple difficulty levels and satisfying drag-and-drop mechanics, it’s perfect for casual play or a focused mental workout. Whether you're completing a 24-piece puzzle or a 1000-piece masterpiece, every solved image is a moment of calm and achievement.",
       image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop",
-      tags: ["Multiplayer", "WebSocket", "Unity", "Networking"],
-      demoUrl: "#",
+      tags: ["Published", "Unity gaming services", "Unity", "Playstore "],
+      demoUrl: "https://youtu.be/Jh3GNGeyD3o",
+      status: "Live"
+    },
+    {
+      title: "Resource Empire",
+      description: "In Resource Empire, you start with a small patch of land and a handful of raw materials. Your goal? Build an unstoppable industrial empire. Mine resources, automate production, and optimize supply chains to fuel your expansion. As you grow, unlock advanced technologies, trade with other empires, and dominate the global economy. Every decision counts — balance efficiency, growth, and sustainability to become the ultimate tycoon.",
+      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop",
+      tags: ["Published", "Game Design", "Unity", "Design patterns", "Problem Solving"],
+      demoUrl: "https://youtu.be/R0XHAVqoEWc",
+      status: "Live"
+    }
+    ,
+    {
+      title: "Arcadia",
+      description: "Step into XR Arcadia, an electrifying hub of immersive mini-games where reality bends and fun never ends! Whether you're dodging lasers in zero gravity, solving holographic puzzles, or mastering futuristic sports, each game is crafted to deliver fast-paced action and intuitive XR gameplay. Designed for quick rounds and instant thrills, XR Arcadia is perfect for party play, solo challenges, or VR/AR arcade competitions.",
+      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop",
+      tags: ["XR Core", "Unity", "Design patterns", "Problem Solving"],
+      demoUrl: "https://youtu.be/Q6JEXl5slRQ",
+      status: "Live"
+    }
+    ,
+    {
+      title: "XR Patient Treatment",
+      description: "XR Patient Treatment uses the power of virtual and augmented reality to create calming, interactive environments designed to support rehabilitation, therapy, and emotional well-being. Whether guiding patients through physical therapy exercises, reducing anxiety and pain during procedures, or providing mental health support through mindfulness and exposure therapy, XR delivers a personalized and engaging treatment experience. It’s care that meets the patient where they are — virtually and emotionally.",
+      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop",
+      tags: ["XR Core", "Unity", "Design patterns", "Problem Solving"],
+      demoUrl: "https://youtu.be/nDlRt5iv660",
+      status: "Live"
+    }
+    ,
+    {
+      title: "BrandPlay",
+      description: "BrandPlay is a gamified marketing platform that empowers brands to create interactive, reward-driven experiences. From mini-games like quizzes, penalty shoots, and memory matches to fully branded contests, BrandPlay turns marketing into play. Businesses can launch campaigns, collect user insights, and boost engagement, while users play for points, prizes, and unforgettable interactions. No coding needed — just creativity, strategy, and the will to stand out.",
+      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop",
+      tags: ["Node Js", "React", "WebGl", "Unity"],
+      demoUrl: "https://youtu.be/1TIqnnHdNEU",
       status: "Live"
     }
   ];
 
   const webProjects = [
     {
-      title: "GameHub Interactive Platform",
+      title: "Gamefied Marketing Platform",
       description: "Full-stack gaming platform with user profiles, achievements, and real-time leaderboards",
       image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop",
       tags: ["React", "Node.js", "WebSocket", "MongoDB"],
@@ -101,14 +136,14 @@ const Index = () => {
   ];
 
   const skills = [
-    { name: "Unity", level: 95 },
-    { name: "C#", level: 90 },
+    { name: "Unity", level: 80 },
+    { name: "C#", level: 70 },
     { name: "WebGL", level: 85 },
-    { name: "React", level: 80 },
-    { name: "VR/AR Development", level: 88 },
-    { name: "Shader Programming", level: 75 },
-    { name: "Game Design", level: 92 },
-    { name: "3D Modeling", level: 70 }
+    { name: "VR/AR Development", level: 70 },
+    { name: "Machine Learning", level:50 },
+    { name: "Mirror Networking", level: 65 },
+    { name: "Node.js", level: 70 },
+    { name: "React", level: 65 }
   ];
 
   const keySkills = [
@@ -183,14 +218,14 @@ const Index = () => {
                   </div>
                   <div className="flex flex-wrap gap-3">
                     {skillGroup.skills.map((skill, skillIndex) => (
-                      <Badge 
-                        key={skill} 
-                        variant="outline" 
-                        className={`border-${skillGroup.color}/50 text-${skillGroup.color} hover:bg-${skillGroup.color}/20 hover:scale-110 transition-all duration-300 text-sm font-medium px-3 py-1`}
-                        style={{ animationDelay: `${(index * 0.1) + (skillIndex * 0.05)}s` }}
-                      >
-                        {skill}
-                      </Badge>
+                  <Badge 
+                  key={skill} 
+                  variant="outline" 
+                  className={`border-${skillGroup.color}/50 text-white hover:bg-${skillGroup.color}/20 hover:scale-110 transition-all duration-300 text-sm font-medium px-3 py-1`}
+                  style={{ animationDelay: `${(index * 0.1) + (skillIndex * 0.05)}s` }}
+                >
+                  {skill}
+                </Badge>
                     ))}
                   </div>
                 </CardContent>
@@ -300,36 +335,54 @@ const Index = () => {
       </section>
 
       {/* Key Skills Section */}
-      <section className="py-20 px-4 relative z-10 bg-gradient-to-r from-background/50 to-card/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-orbitron font-bold mb-12 text-center neon-text text-neon-green">
-            🔧 Key Skills & Technologies
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {keySkills.map((skillGroup, index) => (
-              <Card key={skillGroup.category} className="hud-border bg-card/60 backdrop-blur-sm hover:bg-card/80 transition-all duration-300">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-orbitron font-bold mb-4 text-neon-blue">
-                    {skillGroup.category}
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {skillGroup.skills.map((skill) => (
-                      <Badge 
-                        key={skill} 
-                        variant="outline" 
-                        className="border-neon-purple/50 text-neon-purple hover:bg-neon-purple/20"
-                      >
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+    {/* Key Skills Section - Made more prominent */}
+<section className="py-32 px-4 relative z-10 bg-gradient-to-b from-background via-card/10 to-background">
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-16 animate-scale-up">
+      <h2 className="text-5xl md:text-7xl font-orbitron font-black mb-8 neon-text text-transparent bg-clip-text bg-gradient-to-r from-neon-green via-neon-blue to-neon-purple">
+        🔧 KEY SKILLS & TECHNOLOGIES
+      </h2>
+      <div className="w-32 h-1 bg-gradient-to-r from-neon-blue to-neon-purple mx-auto rounded-full mb-8" />
+      <p className="text-xl md:text-2xl font-rajdhani text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+        Cutting-edge technologies and proven methodologies for next-generation digital experiences
+      </p>
+    </div>
+    
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {keySkills.map((skillGroup, index) => (
+        <Card 
+          key={skillGroup.category} 
+          className="hud-border bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm hover:bg-card/90 transition-all duration-500 transform hover:scale-105 hover:rotate-1 group"
+          style={{ animationDelay: `${index * 0.1}s` }}
+        >
+          <CardContent className="p-8">
+            <div className="flex items-center mb-6">
+              <span className="text-4xl mr-4 group-hover:scale-125 transition-transform duration-300">
+                {skillGroup.icon}
+              </span>
+              <h3 className={`text-2xl font-orbitron font-bold text-${skillGroup.color} group-hover:neon-text transition-all duration-300`}>
+                {skillGroup.category}
+              </h3>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {skillGroup.skills.map((skill, skillIndex) => (
+                <Badge 
+                  key={skill} 
+                  variant="outline" 
+                  className={`border-${skillGroup.color}/50 text-white hover:bg-${skillGroup.color}/20 hover:scale-110 transition-all duration-300 text-sm font-medium px-3 py-1`}
+                  style={{ animationDelay: `${(index * 0.1) + (skillIndex * 0.05)}s` }}
+                >
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 relative z-10">
@@ -459,10 +512,10 @@ const Index = () => {
                   </h4>
                   <div className="space-y-4">
                     {[
-                      { name: "GitHub", url: "#", icon: "🚀" },
-                      { name: "itch.io", url: "#", icon: "🎮" },
+                      { name: "GitHub", url: "https://github.com/seif-el-islem-bensib", icon: "🚀" },
+                      { name: "itch.io", url: "https://seifbensib.itch.io", icon: "🎮" },
                       { name: "ArtStation", url: "#", icon: "🎨" },
-                      { name: "LinkedIn", url: "#", icon: "💼" }
+                      { name: "LinkedIn", url: "https://www.linkedin.com/in/seif-esslem-benacibe/", icon: "💼" }
                     ].map((link) => (
                       <a 
                         key={link.name}
