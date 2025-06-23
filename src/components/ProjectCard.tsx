@@ -28,20 +28,26 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
 
   const isYouTube = project.demoUrl.includes("youtube.com") || project.demoUrl.includes("youtu.be");
 
-  const extractYouTubeId = (url: string): string | null => {
-    try {
-      const parsedUrl = new URL(url);
-      if (parsedUrl.hostname === 'youtu.be') {
-        return parsedUrl.pathname.slice(1);
-      }
-      if (parsedUrl.hostname.includes('youtube.com')) {
-        return parsedUrl.searchParams.get('v');
-      }
-      return null;
-    } catch {
-      return null;
+const extractYouTubeId = (url: string): string | null => {
+  try {
+    const parsedUrl = new URL(url);
+
+    if (parsedUrl.hostname === 'youtu.be') {
+      return parsedUrl.pathname.slice(1);
     }
-  };
+
+    if (parsedUrl.hostname.includes('youtube.com')) {
+      if (parsedUrl.pathname.startsWith('/shorts/')) {
+        return parsedUrl.pathname.split('/')[2]; // /shorts/VIDEO_ID
+      }
+      return parsedUrl.searchParams.get('v');
+    }
+
+    return null;
+  } catch {
+    return null;
+  }
+};
 
   const videoId = isYouTube ? extractYouTubeId(project.demoUrl) : null;
 

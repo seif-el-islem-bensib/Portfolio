@@ -88,15 +88,7 @@ const Index = () => {
       demoUrl: "https://youtu.be/Q6JEXl5slRQ",
       status: "Live"
     }
-    ,
-    {
-      title: "XR Patient Treatment",
-      description: "XR Patient Treatment uses the power of virtual and augmented reality to create calming, interactive environments designed to support rehabilitation, therapy, and emotional well-being. Whether guiding patients through physical therapy exercises, reducing anxiety and pain during procedures, or providing mental health support through mindfulness and exposure therapy, XR delivers a personalized and engaging treatment experience. It’s care that meets the patient where they are — virtually and emotionally.",
-      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop",
-      tags: ["XR Core", "Unity", "Design patterns", "Problem Solving"],
-      demoUrl: "https://youtu.be/nDlRt5iv660",
-      status: "Live"
-    }
+    
     ,
     {
       title: "BrandPlay",
@@ -104,6 +96,15 @@ const Index = () => {
       image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop",
       tags: ["Node Js", "React", "WebGl", "Unity"],
       demoUrl: "https://youtu.be/1TIqnnHdNEU",
+      status: "Live"
+    }
+    ,
+    {
+      title: "AR Indoor Navigation",
+      description: "The AR Navigation System is an augmented reality application designed to guide users through physical spaces using real-time AR overlays. Utilizing smartphone or AR headset cameras, the system anchors digital navigation elements—such as arrows, path lines, and directional cues—onto the user’s real-world environment.",
+      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop",
+      tags: ["AR Core", "Unity Location Services", "WebGl", "Unity AR Foundation"],
+      demoUrl:  "https://youtube.com/shorts/bafxX4j1zDg",
       status: "Live"
     }
   ];
