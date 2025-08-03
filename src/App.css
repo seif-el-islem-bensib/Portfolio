@@ -18,6 +18,16 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.logo-centered {
+  position: absolute;
+  top: 20px; /* adjust vertical position */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px; /* size */
+  height: auto;
+}
+
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

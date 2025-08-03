@@ -34,11 +34,19 @@ const HeroSection = () => {
         </div>
       </div>
 
+
       {/* Main content */}
       <div className="text-center z-10 max-w-4xl mx-auto px-4">
+             <div className="flex justify-center mb-8 animate-scale-up">
+    <img
+      src="/LogoPng.png"
+      alt="Pixel Perfect Logo"
+      className="w-80 h-80 object-contain drop-shadow-lg"
+    />
+  </div>
         <div className="mb-8 animate-scale-up">
           <h1 className="text-6xl md:text-8xl font-orbitron font-black mb-4 neon-text text-transparent bg-clip-text bg-gradient-to-r from-neon-blue via-neon-purple to-neon-green">
-            SEIF ESSLEM BENSIB
+            Pixel Perfect
           </h1>
           <div className="h-16 flex items-center justify-center">
             <p className="text-2xl md:text-3xl font-rajdhani font-medium text-neon-blue">
@@ -47,6 +55,8 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
+
+     
 
         <div className="mb-12 animate-slide-in-left">
           <p className="text-xl md:text-2xl font-rajdhani text-muted-foreground max-w-2xl mx-auto leading-relaxed">
