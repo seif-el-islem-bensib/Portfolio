@@ -204,7 +204,7 @@ const Index = () => {
             <Card className="hud-border bg-gradient-to-r from-card/90 to-card/70 backdrop-blur-sm animate-scale-up">
               <CardContent className="p-12">
                <h3 className="text-4xl font-orbitron font-bold mb-8 text-center text-white">
-  🚀 Why Work With Us?
+  🚀 Why Work With Me?
 </h3>
                 <div className="grid md:grid-cols-3 gap-8">
                   <div className="text-center group">
@@ -240,7 +240,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <div className={`transition-all duration-1000 ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
             <h2 className="text-4xl md:text-6xl font-orbitron font-bold mb-12 text-center neon-text text-neon-blue">
-              About Us
+              About Me
             </h2>
           </div>
           
